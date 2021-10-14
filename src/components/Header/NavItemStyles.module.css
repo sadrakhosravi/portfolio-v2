@@ -1,0 +1,31 @@
+.Nav {
+  counter-reset: link;
+}
+
+.NavLink {
+  padding: 3.5px 0px;
+  transition: all 0.3s ease-in-out;
+}
+
+.NavLink::before {
+  font-family: 'Roboto Mono', arial, sans-serif;
+  counter-increment: link;
+  content: '0' counter(link) '.';
+  @apply text-accent;
+}
+
+.NavLink::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  transition: all 0.5s;
+  width: 0;
+  height: 2px;
+  @apply bg-accent;
+}
+
+.NavItem:hover .NavLink::after {
+  left: 0;
+  width: 100%;
+}

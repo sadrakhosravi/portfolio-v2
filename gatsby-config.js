@@ -5,6 +5,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-tsconfig-paths',
+    `gatsby-plugin-react-helmet`,
     'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-source-filesystem',
