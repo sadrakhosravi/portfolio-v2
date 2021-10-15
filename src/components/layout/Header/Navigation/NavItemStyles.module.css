@@ -4,7 +4,7 @@
 
 .NavLink {
   padding: 3.5px 0px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .NavLink::before {

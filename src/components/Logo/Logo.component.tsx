@@ -39,7 +39,9 @@ const Logo: React.FC = () => {
           </defs>
         </svg>
       </span>
-      <span className="text-lg font-bold group-hover:text-white transition duration-300">Sadra Khosravi</span>
+      <span className="sm:text-base lg:text-lg font-bold group-hover:text-white transition duration-300">
+        Sadra Khosravi
+      </span>
     </a>
   );
 };

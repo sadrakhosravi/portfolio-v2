@@ -31,9 +31,16 @@ module.exports = {
       bold: 700,
     },
     spacing: {
+      0.25: '0.25rem',
+      0.5: '0.5rem',
+      0.65: '0.65rem',
+      0.75: '0.75rem',
       1: '1rem',
+      1.5: '1.5rem',
       2: '2rem',
+      3: '3rem',
       4: '4rem',
+      5: '5rem',
       6: '6rem',
       8: '8rem',
       10: '10rem',
@@ -48,7 +55,10 @@ module.exports = {
     extend: {},
   },
   variants: {
-    textColor: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus', 'active'],
+    backgroundColor: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'active'],
+    textColor: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'active'],
+    backgroundOpacity: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'active'],
+
     extend: {},
   },
   plugins: [],
