@@ -20,6 +20,9 @@ module.exports = {
       base: ['1.6rem', '2.4rem'],
       lg: ['2rem', '2.8rem'],
       xl: ['2.4rem', '3.2rem'],
+      '2xl': ['3.5rem', '4.9rem'],
+      '3xl': ['5rem', '6.5rem'],
+      '4xl': ['6rem', '7rem'],
     },
     fontFamily: {
       sans: ['Apercu', 'arial', 'sans-serif'],
@@ -58,6 +61,7 @@ module.exports = {
     backgroundColor: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'active'],
     textColor: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'active'],
     backgroundOpacity: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'active'],
+    display: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'active'],
 
     extend: {},
   },

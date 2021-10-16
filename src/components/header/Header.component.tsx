@@ -1,13 +1,13 @@
 import React from 'react';
 
 // Components
-import Logo from '@components/Logo/Logo.component';
-import MainNavigation from './Navigation/MainNavigation.component';
-import PrimaryButton from '~/components/buttons/PrimaryButton.component';
+import Logo from '~/components/Logo.component';
+import MainNavigation from './MainNavigation.component';
+import PrimaryButton from '~/components/Button.component';
 
-const Header: React.FC = () => {
+const Header = (): JSX.Element => {
   return (
-    <header className="flex justify-between items-center lg:px-6 sm:px-3 py-3">
+    <header className="fixed inset-0 w-full flex justify-between items-center lg:px-6 sm:px-3 py-3">
       <div className="lg:w-2/6 sm:w-1/2 ">
         <Logo />
       </div>

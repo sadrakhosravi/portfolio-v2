@@ -4,9 +4,9 @@ import React from 'react';
 import { NavItems } from '~/config';
 
 // Custom CSS
-import * as styles from './NavItemStyles.module.css';
+import * as styles from '../styles/NavItemStyles.module.css';
 
-const MainNavigation: React.FC = () => {
+const MainNavigation = (): JSX.Element => {
   return (
     <nav className="text-center">
       <ul className={`${styles.Nav}`}>

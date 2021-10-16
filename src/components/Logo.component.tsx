@@ -2,7 +2,7 @@ import React from 'react';
 
 // Logo
 
-const Logo: React.FC = () => {
+const Logo = (): JSX.Element => {
   return (
     <a href="/" className="flex items-center group">
       <span className="mr-1">
