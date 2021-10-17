@@ -1,0 +1,28 @@
+.StyledImage > * {
+  @apply rounded-md;
+}
+
+.StyledImage::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.StyledImage::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  @apply border-2 border-accent rounded-md transition-all duration-300;
+}
+
+.StyledImage:hover::after {
+  left: 10px;
+  bottom: 10px;
+}

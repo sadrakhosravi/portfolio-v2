@@ -12,6 +12,7 @@ const MainNavigation = (): JSX.Element => {
       <ul className={`${styles.Nav}`}>
         {NavItems.map(NavItem => (
           <li
+            key={NavItem.text}
             className={`inline-block lg:mx-1.5 sm:mx-1 hover:text-accent active:text-accent ${styles.NavItem}`}
           >
             <a className={`relative ${styles.NavLink}`} href={NavItem.link}>
