@@ -20,12 +20,14 @@ module.exports = {
       base: ['1.6rem', '2.4rem'],
       lg: ['2rem', '2.8rem'],
       xl: ['2.4rem', '3.2rem'],
-      '2xl': ['3.5rem', '4.9rem'],
-      '3xl': ['5rem', '6.5rem'],
-      '4xl': ['6rem', '7rem'],
+      '2xl': ['2.8rem', '3.9rem'],
+      '3xl': ['3.1rem', '4.3rem'],
+      '4xl': ['3.5rem', '4.9rem'],
+      '5xl': ['6rem', '8rem'],
     },
     fontFamily: {
       sans: ['Apercu', 'arial', 'sans-serif'],
+      mono: ['Roboto Mono', 'arial', 'sans-serif'],
     },
     fontWeight: {
       light: 300,

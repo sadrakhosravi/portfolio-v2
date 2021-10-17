@@ -6,7 +6,10 @@ import '~/styles/styles.css';
 
 // Components
 import Layout from '~/components/Layout.component';
-import Hero from '~/components/sections/Hero.section';
+
+// Sections
+import HeroSection from '~/components/sections/Hero.section';
+import AboutSection from '~/components/sections/About.section';
 
 const IndexPage = (): JSX.Element => {
   return (
@@ -15,7 +18,8 @@ const IndexPage = (): JSX.Element => {
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
       </Helmet>
       <Layout>
-        <Hero />
+        <HeroSection />
+        <AboutSection />
       </Layout>
     </>
   );
