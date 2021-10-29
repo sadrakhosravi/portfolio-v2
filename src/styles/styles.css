@@ -83,7 +83,6 @@
 /* Add background color to the entire website */
 html {
   @apply bg-navy text-light-blue;
-  font-size: 62.5%; /* 1rem = 10px */
 }
 
 body {
@@ -102,7 +101,7 @@ section:not(:first-child) {
 }
 
 h1 {
-  @apply text-5xl;
+  @apply text-7xl;
 }
 
 h2 {
@@ -111,4 +110,16 @@ h2 {
 
 h3 {
   @apply text-3xl;
+}
+
+h4 {
+  @apply text-2xl;
+}
+
+p {
+  @apply mb-4;
+}
+
+pre {
+  @apply -mb-1;
 }

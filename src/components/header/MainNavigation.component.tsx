@@ -13,9 +13,9 @@ const MainNavigation = (): JSX.Element => {
         {NavItems.map(NavItem => (
           <li
             key={NavItem.text}
-            className={`inline-block lg:mx-1.5 sm:mx-1 hover:text-accent active:text-accent ${styles.NavItem}`}
+            className={`inline-block lg:mx-3 sm:mx-2 hover:text-accent active:text-accent ${styles.NavItem}`}
           >
-            <a className={`relative ${styles.NavLink}`} href={NavItem.link}>
+            <a className={`relative text-sm ${styles.NavLink}`} href={NavItem.link}>
               {NavItem.text}
             </a>
           </li>

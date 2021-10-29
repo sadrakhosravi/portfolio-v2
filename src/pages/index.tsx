@@ -10,6 +10,7 @@ import Layout from 'components/Layout.component';
 // Sections
 import HeroSection from 'components/sections/Hero.section';
 import AboutSection from 'components/sections/About.section';
+import ProjectsSection from 'components/sections/Projects.section';
 
 const IndexPage = (): JSX.Element => {
   return (
@@ -20,6 +21,7 @@ const IndexPage = (): JSX.Element => {
       <Layout>
         <HeroSection />
         <AboutSection />
+        <ProjectsSection />
       </Layout>
     </>
   );

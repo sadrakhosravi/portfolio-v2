@@ -6,14 +6,15 @@ import * as styles from './styles/SectionTitle.module.css';
 type SectionTitleProps = {
   preText: string;
   text: string;
+  noMargin?: boolean;
 };
 
-const SectionTitle = ({ preText, text }: SectionTitleProps): JSX.Element => {
+const SectionTitle = ({ preText, text, noMargin = false }: SectionTitleProps): JSX.Element => {
   // Reverse flex columns for better accessibility (screen readers ...) while keeping the same design
   return (
-    <div className="flex flex-col-reverse">
+    <div className={`flex flex-col-reverse ${!noMargin && 'mb-2'}`}>
       <h2 className={`${styles.SectionTitle} font-bold text-white`}>{text}</h2>
-      <p className="font-mono text-accent">{preText}</p>
+      <pre className="font-mono text-accent">{preText}</pre>
     </div>
   );
 };

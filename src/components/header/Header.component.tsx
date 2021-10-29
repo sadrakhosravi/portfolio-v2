@@ -23,15 +23,15 @@ const Header = (): JSX.Element => {
 
   return (
     <header
-      className={`fixed inset-0 z-20 w-full flex justify-between items-center lg:px-6 sm:px-3 py-1 transition-all duration-300 ${
+      className={`fixed inset-0 z-20 w-full flex justify-between items-center lg:px-10 sm:px-3 py-9 transition-all duration-300 ${
         !isScrolled && 'h-10'
-      } ${isScrolled && 'bg-navy bg-opacity-70 h-8 blur-md drop-shadow-2xl'} ${isScrolled && styles.Header}`}
+      } ${isScrolled && 'bg-navy bg-opacity-60 h-8 blur-md drop-shadow-2xl'} ${isScrolled && styles.Header}`}
     >
       <div className="lg:w-2/6 sm:w-1/2 ">
         <Logo />
       </div>
 
-      <div className="sm:w-1/2 lg:w-4/6 justify-end text-right flex items-center gap-1">
+      <div className="sm:w-1/2 lg:w-4/6 justify-end text-right flex items-center gap-3">
         <MainNavigation />
 
         <span className="md:hidden lg:block">

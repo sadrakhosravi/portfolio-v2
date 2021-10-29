@@ -1,28 +1,47 @@
-.StyledImage > * {
-  @apply rounded-md;
+.StyledImage {
+  --frame-margin: 20px;
+  --frame-margin-hover: 10px;
+  margin-top: var(--frame-margin);
 }
 
-.StyledImage::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+.StyledImage > * {
+  @apply rounded-md;
 }
 
 .StyledImage::after {
   content: '';
   position: absolute;
-  bottom: 20px;
-  left: 20px;
   width: 100%;
   height: 100%;
   z-index: -1;
+  bottom: var(--frame-margin);
   @apply border-2 border-accent rounded-md transition-all duration-300;
 }
 
 .StyledImage:hover::after {
-  left: 10px;
-  bottom: 10px;
+  bottom: var(--frame-margin-hover);
+}
+
+.StyledImageFrameRight {
+  margin-right: var(--frame-margin);
+}
+
+.StyledImageFrameRight::after {
+  left: var(--frame-margin);
+}
+
+.StyledImageFrameRight:hover::after {
+  left: var(--frame-margin-hover);
+}
+
+.StyledImageFrameLeft {
+  margin-left: var(--frame-margin);
+}
+
+.StyledImageFrameLeft::after {
+  right: var(--frame-margin);
+}
+
+.StyledImageFrameLeft:hover::after {
+  right: var(--frame-margin-hover);
 }
