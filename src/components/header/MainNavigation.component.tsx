@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Navigation items
-import { NavItems } from '~/config';
+import { NavItems } from 'config';
 
 // Custom CSS
 import * as styles from '../styles/NavItemStyles.module.css';

@@ -1,15 +1,17 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://www.sadrakhosravi.com',
+    siteUrl: 'https://www.yourdomain.tld',
     title: 'Sadra Khosravi',
   },
   plugins: [
-    'gatsby-plugin-tsconfig-paths',
-    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-root-import',
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
-    'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-mdx',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -17,6 +19,14 @@ module.exports = {
         path: './src/images/',
       },
       __key: 'images',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: './src/pages/',
+      },
+      __key: 'pages',
     },
   ],
 };

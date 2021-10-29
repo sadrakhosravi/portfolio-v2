@@ -2,14 +2,14 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 // Styles
-import '~/styles/styles.css';
+import 'styles/styles.css';
 
 // Components
-import Layout from '~/components/Layout.component';
+import Layout from 'components/Layout.component';
 
 // Sections
-import HeroSection from '~/components/sections/Hero.section';
-import AboutSection from '~/components/sections/About.section';
+import HeroSection from 'components/sections/Hero.section';
+import AboutSection from 'components/sections/About.section';
 
 const IndexPage = (): JSX.Element => {
   return (

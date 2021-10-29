@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
 // Components
-import Logo from '~/components/Logo.component';
+import Logo from 'components/Logo.component';
 import MainNavigation from './MainNavigation.component';
-import Button from '~/components/Button.component';
+import Button from 'components/Button.component';
 
 // Styles
 import * as styles from '../styles/Header.module.css';

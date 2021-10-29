@@ -4,7 +4,7 @@ import React from 'react';
 import Button from '../Button.component';
 
 // Icons
-import RightArrow from '@icons/RightArrow.icon';
+import RightArrow from 'components/icons/RightArrow.icon';
 
 const HeroSection = () => {
   return (

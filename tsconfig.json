@@ -9,13 +9,6 @@
     "jsx": "preserve" /* Specify what JSX code is generated. */,
     /* Modules */
     "baseUrl": "./src" /* Specify the base directory to resolve non-relative module names. */,
-    "paths": {
-      "~/*": ["./*"],
-      "@components/*": ["./components/*"],
-      "@assets/*": ["./assets/*"],
-      "@icons/*": ["./components/icons/*"],
-      "@images/*": ["./assets/images/*"]
-    } /* Specify a set of entries that re-map imports to additional lookup locations. */,
     "module": "commonjs" /* Specify what module code is generated. */,
     "moduleResolution": "node" /* Specify how TypeScript looks up a file from a given module specifier. */,
 
