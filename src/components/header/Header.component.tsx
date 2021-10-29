@@ -5,9 +5,6 @@ import Logo from 'components/Logo.component';
 import MainNavigation from './MainNavigation.component';
 import Button from 'components/Button.component';
 
-// Styles
-import * as styles from '../styles/Header.module.css';
-
 const Header = (): JSX.Element => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
@@ -25,7 +22,7 @@ const Header = (): JSX.Element => {
     <header
       className={`fixed inset-0 z-20 w-full flex justify-between items-center lg:px-10 sm:px-3 py-9 transition-all duration-300 ${
         !isScrolled && 'h-10'
-      } ${isScrolled && 'bg-navy bg-opacity-60 h-8 blur-md drop-shadow-2xl'} ${isScrolled && styles.Header}`}
+      } ${isScrolled && 'bg-navy bg-opacity-60 h-8 drop-shadow-2xl'} ${isScrolled && 'blur'}`}
     >
       <div className="lg:w-2/6 sm:w-1/2 ">
         <Logo />
