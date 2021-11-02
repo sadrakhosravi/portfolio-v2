@@ -19,7 +19,7 @@ type ElementsStyle = {
   description: string;
 };
 
-const FeaturedProjects = ({ side = 'left', data }: FeaturedProjectsProps): JSX.Element => {
+const FeaturedProjects = ({ side = 'left' }: FeaturedProjectsProps): JSX.Element => {
   const isLeft = side === 'left';
 
   const elementsStyle: ElementsStyle = {
@@ -30,7 +30,7 @@ const FeaturedProjects = ({ side = 'left', data }: FeaturedProjectsProps): JSX.E
 
   return (
     <Container className="lg:max-w-6xl mx-auto py-8">
-      <Container.Column className="w-full ">
+      <Container.Column className="w-full">
         <StyledImage
           className={`w-2/3 my-6 transition-all duration-300 ${elementsStyle.image}} ${
             isLeft ? styles.ProjectImageLeft : styles.ProjectImageRight

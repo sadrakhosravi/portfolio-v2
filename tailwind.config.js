@@ -52,7 +52,12 @@ module.exports = {
     backgroundOpacity: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'active'],
     display: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'active'],
 
-    extend: {},
+    extend: {
+      width: ['group-hover'],
+      translate: ['group-hover'],
+      margin: ['group-hover'],
+      padding: ['group-hover'],
+    },
   },
   plugins: [],
 };

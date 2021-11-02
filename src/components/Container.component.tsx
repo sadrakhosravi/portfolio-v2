@@ -17,9 +17,19 @@ const Container = ({ className, children, gap = true, center = false }: Containe
   </div>
 );
 
-Container.Column = ({ className, children, gap = true, center = false }: ContainerProps) => (
+type ColumnProps = {
+  width?: 'full' | '1/2' | '1/3' | '1/4' | '1/6';
+};
+
+Container.Column = ({
+  className,
+  width = '1/2',
+  children,
+  gap = true,
+  center = false,
+}: ContainerProps & ColumnProps) => (
   <div
-    className={`w-1/2 py-5 relative flex flex-col ${gap ? 'gap-6' : ''} ${className || ''} ${
+    className={`w-${width} py-5 relative flex flex-col ${gap ? 'gap-6' : ''} ${className || ''} ${
       center ? 'items-center' : ''
     }`}
   >
