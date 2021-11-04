@@ -18,7 +18,7 @@ const Container = ({ className, children, gap = true, center = false }: Containe
 );
 
 type ColumnProps = {
-  width?: 'full' | '1/2' | '1/3' | '1/4' | '1/6';
+  width?: 'full' | '1/2' | '1/3' | '2/3' | '1/4' | '3/4' | '1/6' | '5/6';
 };
 
 Container.Column = ({
@@ -30,7 +30,7 @@ Container.Column = ({
 }: ContainerProps & ColumnProps) => (
   <div
     className={`w-${width} py-5 relative flex flex-col ${gap ? 'gap-6' : ''} ${className || ''} ${
-      center ? 'items-center' : ''
+      center ? 'justify-center' : ''
     }`}
   >
     {children}

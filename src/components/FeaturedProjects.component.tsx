@@ -23,7 +23,7 @@ const FeaturedProjects = ({ side = 'left' }: FeaturedProjectsProps): JSX.Element
   const isLeft = side === 'left';
 
   const elementsStyle: ElementsStyle = {
-    image: `${isLeft ? `self-start ${styles.ProjectImageLeft}` : `self-end ${styles.ProjectImage}`}`,
+    image: `${isLeft ? `self-start ${styles.ProjectImageLeft}` : `self-end ${styles.ProjectImageRight}`}`,
     framePosition: `${isLeft ? 'left' : 'right'}`,
     description: `${isLeft ? `right-0 ` : `left-0`}`,
   };
