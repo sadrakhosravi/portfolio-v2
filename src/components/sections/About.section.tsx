@@ -14,38 +14,46 @@ const AboutSection = () => {
     'Typescript',
     'NodeJS',
     'ElectronJS',
-    'Gatsby',
     'React',
+    'Redux',
+    'Gatsby',
     'GraphQL',
     'RestAPI',
   ];
 
   return (
     <section>
-      <Container center>
-        <Container.Column>
+      <Container>
+        <Container.Column center>
           <SectionTitle preText="Background" text="About" noMargin />
           <div>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam commodi corrupti fugit nam,
-              est architecto, error dolorem, soluta quibusdam illum excepturi veritatis minima. Voluptatem
-              quod tempora dolorius amet quaerat necessitatibus?
+              Hello! My name is Sadra Khosravi and I am a full-stack developer based in Vancouver, B.C. I
+              enjoy designing and developing digital experiences and applications using HTML, CSS, and
+              JavaScript.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quibusdam corrupti sunt
-              aperiam voluptas non laudantium, quam minima ullam recusandae quasi et repudiandae, a, corporis
-              dolorum atque ratione iusto itaqu.
+              I started designing websites with WordPress back in 2016. Working with different themes and page
+              builders taught me valuable experience in how a website can be formed from an idea to a
+              production ready state.
             </p>
+            <p>
+              I have worked on number of projects ranging from static, content-driven, and data-driven
+              websites and applications. My current focus is on developing a full fledged data acquisition
+              software for NIRS medical experiments at the International Collaboration on Research Discovery
+              (ICORD).
+            </p>
+            <p>My current tech-stack:</p>
+            <ol className="flex flex-wrap">
+              {recentTechnologies.map((technology: string) => (
+                <li className="w-1/4 mb-1 text-sm text-accent font-mono" key={technology}>
+                  - {technology}
+                </li>
+              ))}
+            </ol>
           </div>
-          <ol className="flex flex-wrap">
-            {recentTechnologies.map((technology: string) => (
-              <li className="w-1/4 mb-1 text-sm text-accent font-mono" key={technology}>
-                - {technology}
-              </li>
-            ))}
-          </ol>
         </Container.Column>
-        <Container.Column>
+        <Container.Column center>
           <StyledImage>
             <StaticImage src="../../images/placeholder.jpg" alt="Sadra Khosravi Image" />
           </StyledImage>
