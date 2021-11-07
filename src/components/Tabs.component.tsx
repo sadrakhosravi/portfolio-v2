@@ -76,10 +76,6 @@ Tabs.Indicator = ({ activeTab = 'tab-0' }: { activeTab: string }) => {
     setStyles({ offsetWidth: clientWidth, offsetLeft: offsetLeft - 8 });
   };
 
-  window.onload = () => {
-    console.log('Loaded');
-  };
-
   useEffect(() => {
     setElementStyles();
   }, [activeTab]);

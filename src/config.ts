@@ -1,11 +1,5 @@
 // Navigation Item
-
-export type NavItem = {
-  text: string;
-  link: string;
-}[];
-
-export const NavItems: NavItem = [
+export const NavItems = [
   {
     text: 'About',
     link: '#about',
@@ -27,3 +21,19 @@ export const NavItems: NavItem = [
     link: '#contact',
   },
 ];
+
+// Skills
+export const SkillsList = {
+  technologies: [
+    'TypeScript',
+    'React',
+    'Gatsby',
+    'GraphQL',
+    'NodeJS',
+    'Express',
+    'Electron',
+    'MySQL',
+    'SQLite',
+    'MongoDB',
+  ],
+};
