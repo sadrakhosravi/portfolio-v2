@@ -31,8 +31,8 @@ module.exports = {
     },
 
     fontFamily: {
-      sans: ['Apercu', 'arial', 'sans-serif'],
-      mono: ['Roboto Mono', 'arial', 'sans-serif'],
+      sans: ['Apercu', 'sans-serif'],
+      mono: ['Roboto Mono', 'sans-serif'],
     },
     fontWeight: {
       light: 300,
@@ -43,6 +43,21 @@ module.exports = {
     extend: {
       spacing: {
         0.25: '0.25rem',
+      },
+      minWidth: {
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75',
+      },
+      minHeight: {
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75',
+      },
+      maxWidth: {
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75',
       },
     },
   },
@@ -55,8 +70,10 @@ module.exports = {
     extend: {
       width: ['group-hover'],
       translate: ['group-hover'],
-      margin: ['group-hover'],
-      padding: ['group-hover'],
+      margin: ['group-hover', 'last'],
+      padding: ['group-hover', 'last'],
+      border: ['hover', 'active'],
+      fill: ['hover', 'active', 'focus'],
     },
   },
   plugins: [],

@@ -1,0 +1,26 @@
+.TabsContainer {
+  min-height: 15rem;
+  min-width: 50%;
+  max-width: 60%;
+}
+
+.TabButton {
+  min-width: 10rem;
+}
+
+.TabContent ul {
+  @apply px-10;
+}
+
+.TabContent ul li {
+  @apply mb-4;
+}
+
+.TabContent ul li::before {
+  @apply text-accent;
+  content: '\2022';
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
