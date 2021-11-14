@@ -11,7 +11,7 @@ const HeroSection = () => {
   return (
     <section className="h-screen relative">
       <Container className="h-full" center>
-        <Container.Column className="w-full" gap={false}>
+        <Container.Column width="full" gap={false}>
           <h1 className="font-bold text-white">Hello!</h1>
           <h3 className="font-medium text-white -mt-3">
             My name is <span className="text-accent">Sadra Khosravi</span> and I am a{' '}

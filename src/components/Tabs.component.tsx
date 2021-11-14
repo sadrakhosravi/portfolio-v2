@@ -73,7 +73,9 @@ Tabs.Indicator = ({ activeTab = 'tab-0' }: { activeTab: string }) => {
 
   const setElementStyles = () => {
     const { clientWidth, offsetLeft } = document.getElementById(activeTab) as HTMLElement;
-    setStyles({ offsetWidth: clientWidth, offsetLeft: offsetLeft - 8 });
+    requestAnimationFrame(() => {
+      setStyles({ offsetWidth: clientWidth, offsetLeft: offsetLeft - 8 });
+    });
   };
 
   useEffect(() => {

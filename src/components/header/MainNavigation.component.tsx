@@ -9,7 +9,7 @@ import * as styles from '../styles/NavItemStyles.module.css';
 const MainNavigation = (): JSX.Element => {
   return (
     <nav className="text-center">
-      <ul className={`${styles.Nav}`}>
+      <ul className={`${styles.Nav} hidden lg:block`}>
         {NavItems.map(NavItem => (
           <li
             key={NavItem.text}
