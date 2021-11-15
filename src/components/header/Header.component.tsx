@@ -20,9 +20,9 @@ const Header = (): JSX.Element => {
 
   return (
     <header
-      className={`fixed inset-0 z-20 w-full flex justify-between items-center px-4 lg:px-10 py-9 transition-all duration-300 ${
-        !isScrolled && 'h-10'
-      } ${isScrolled && 'bg-navy bg-opacity-60 h-8 drop-shadow-2xl'} ${isScrolled && 'blur'}`}
+      className={`fixed top-0 left-0 z-20 w-full flex justify-between items-center px-4 lg:px-10 transition-all duration-300 ${
+        !isScrolled && 'h-70px'
+      } ${isScrolled && 'bg-navy bg-opacity-60 h-60px drop-shadow-2xl'} ${isScrolled && 'blur'}`}
     >
       <div className="w-1/2 lg:w-2/6 ">
         <Logo />

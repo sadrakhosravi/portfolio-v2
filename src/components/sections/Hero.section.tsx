@@ -13,7 +13,7 @@ const HeroSection = () => {
       <Container className="h-full" center>
         <Container.Column width="full" gap={false}>
           <h1 className="font-bold text-white">Hello!</h1>
-          <h3 className="font-medium text-white -mt-3">
+          <h3 className="mt-0 lg:-mt-3 font-medium text-white">
             My name is <span className="text-accent">Sadra Khosravi</span> and I am a{' '}
             <span className="text-accent">Full-stack Developer</span>.
           </h3>

@@ -22,7 +22,7 @@ module.exports = {
       base: '1.125rem',
       lg: '1.25rem',
       xl: '1.5rem',
-      '2xl': '1.75rem',
+      '2xl': ['1.75rem', '2.1rem'],
       '3xl': '1.875rem',
       '4xl': '2.25rem',
       '5xl': '3rem',
@@ -43,6 +43,10 @@ module.exports = {
     extend: {
       spacing: {
         0.25: '0.25rem',
+      },
+      height: {
+        '60px': '60px',
+        '70px': '70px',
       },
       minWidth: {
         '1/4': '25%',

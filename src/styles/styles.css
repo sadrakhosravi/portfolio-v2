@@ -1,4 +1,27 @@
 @tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-6xl lg:text-7xl;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl lg:text-3xl;
+  }
+
+  h4 {
+    @apply text-lg lg:text-xl;
+  }
+
+  p {
+    @apply mb-4;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
 
@@ -38,26 +61,6 @@ section {
 
 section:not(:first-child) {
   @apply py-16;
-}
-
-h1 {
-  @apply text-5xl lg:text-7xl;
-}
-
-h2 {
-  @apply text-3xl lg:text-4xl;
-}
-
-h3 {
-  @apply text-2xl lg:text-3xl;
-}
-
-h4 {
-  @apply text-lg lg:text-xl;
-}
-
-p {
-  @apply mb-4;
 }
 
 pre {
