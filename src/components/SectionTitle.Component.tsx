@@ -13,7 +13,7 @@ const SectionTitle = ({ preText, text, noMargin = false }: SectionTitleProps): J
   // Reverse flex columns for better accessibility (screen readers ...) while keeping the same design
   return (
     <div className={`flex flex-col-reverse ${!noMargin && 'pb-2'}`}>
-      <h2 className={`${styles.SectionTitle} font-bold text-white`}>{text}</h2>
+      <h2 className={`${styles.SectionTitle} font-bold text-white mt-1`}>{text}</h2>
       <pre className="font-mono text-accent">{preText}</pre>
     </div>
   );

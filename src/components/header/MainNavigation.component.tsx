@@ -27,7 +27,7 @@ const MainNavigation = ({ isMenuOpen, setIsMenuOpen }: MainNavigationProps): JSX
         ))}
       </ul>
       <div
-        className={`flex flex-col px-3 h-full w-10 items-center justify-center text-right z-20 ${
+        className={`flex flex-col lg:hidden px-3 h-60px w-8 items-center justify-center text-right z-20 ${
           styles.MobileMenu
         } ${isMenuOpen ? styles.MobileMenuActive : ''}`}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -36,24 +36,34 @@ const MainNavigation = ({ isMenuOpen, setIsMenuOpen }: MainNavigationProps): JSX
         <span></span>
       </div>
       <div
-        className={`fixed top-0 left-0 w-full z-10 bg-navy duration-700 ${
-          isMenuOpen ? 'h-screen visible' : 'h-60px invisible'
+        className={`fixed top-[58.5px] left-0 w-full duration-700 transition-all ${
+          isMenuOpen ? 'h-[calc(100vh-58.5px)]' : 'h-0'
         }`}
       >
         <div
-          className={`relative h-70px border-light-blue border-b-2 z-40 duration-1000 ${
+          className={`relative border-light-blue border-b-[1.5px] duration-1000 ${
             isMenuOpen ? 'w-full' : 'w-0'
           }`}
         />
-        <ul className="py-10 px-8 space-y-6 transition duration-500">
-          {NavItems.map(NavItem => (
-            <li key={NavItem.text} className={`text-left border-b-2 border-light-blue border-opacity-50`}>
-              <a className={`relative text-lg`} href={NavItem.link}>
-                {NavItem.text}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="bg-navy h-full relative duration-150">
+          <ul className="py-10 px-8 space-y-6 transition duration-500" hidden={!isMenuOpen}>
+            {NavItems.map(NavItem => (
+              <li
+                key={NavItem.text}
+                className={`text-left border-b-[1.25px] border-light-blue border-opacity-60`}
+              >
+                <a className={`relative font-medium text-lg`} href={NavItem.link}>
+                  {NavItem.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="absolute bottom-4 left-0 w-full" hidden={!isMenuOpen}>
+            <span className="mx-2">Email</span>
+            <span className="mx-2">Github</span>
+            <span className="mx-2">LinkedIn</span>
+          </div>
+        </div>
       </div>
     </nav>
   );

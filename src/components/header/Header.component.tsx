@@ -22,11 +22,11 @@ const Header = (): JSX.Element => {
 
   return (
     <header
-      className={`fixed top-0 left-0 z-50 w-full flex justify-between items-center px-4 lg:px-10 transition-all duration-300 ${
-        !isScrolled ? 'h-70px' : 'bg-navy bg-opacity-60 h-60px drop-shadow-2xl'
+      className={`fixed top-0 left-0 h-60px z-50 w-full flex justify-between items-center px-4 lg:px-10 transition-all duration-300 border-b-[1.5px] border-light-blue border-opacity-10 ${
+        !isScrolled ? '' : 'bg-navy  drop-shadow-2xl'
       } `}
     >
-      <div className="w-1/2 lg:w-2/6 z-20 ">
+      <div className="w-1/2 lg:w-2/6 z-20">
         <Logo />
       </div>
 

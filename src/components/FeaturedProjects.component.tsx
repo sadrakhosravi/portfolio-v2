@@ -3,7 +3,6 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 // Components
 import Container from './Container.component';
-import StyledImage from './StyledImage.component';
 
 // Styles
 import * as styles from './styles/FeaturedProjects.module.css';
@@ -29,31 +28,26 @@ const FeaturedProjects = ({ side = 'left' }: FeaturedProjectsProps): JSX.Element
   };
 
   return (
-    <Container className="lg:max-w-6xl mx-auto py-8">
+    <Container className="lg:max-w-6xl mx-auto py-6 lg:py-14">
       <Container.Column width="full">
-        <StyledImage
-          className={`w-2/3 my-6 transition-all duration-300 ${elementsStyle.image}} ${
-            isLeft ? styles.ProjectImageLeft : styles.ProjectImageRight
-          }`}
-          framePosition={elementsStyle.framePosition}
-        >
-          <StaticImage src="../../images/placeholder.jpg" alt="Sadra Khosravi Image" />
-        </StyledImage>
+        <StaticImage
+          className={`w-full lg:w-2/3 rounded-md ${elementsStyle.image}`}
+          src="../../images/placeholder.jpg"
+          alt="Sadra Khosravi Image"
+        />
         <div
-          className={`flex flex-col gap-2 w-1/2 absolute bg-slate-blue bg-opacity-90 blur px-10 py-7 rounded-md bottom-0 transition-all duration-200 ${styles.ProjectDetails} ${elementsStyle.description}`}
+          className={`flex items-center w-full h-full lg:h-auto lg:w-1/2 absolute bottom-0  px-5 lg:px-10 py-4 lg:py-7 rounded-md lg:-mb-6 transition-all duration-200 bg-navy lg:bg-slate-blue bg-opacity-80 lg:bg-opacity-90 lg:backdrop-saturate-200 lg:backdrop-blur-lg  ${elementsStyle.description}`}
         >
-          <h4 className="font-medium">Full Stack School Management App</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cupiditate vel voluptatum
-            molestiae possimus id quia, labore harum, quasi amet aut quidem ipsam officiis repellat modi
-            ratione et error quo!
-          </p>
-          <ul className="flex">
-            <li className="w-1/4 pb-0.5 text-accent font-mono">Test</li>
-            <li className="w-1/4 pb-0.5 text-accent font-mono">Test</li>
-            <li className="w-1/4 pb-0.5 text-accent font-mono">Test</li>
-            <li className="w-1/4 pb-0.5 text-accent font-mono">Test</li>
-          </ul>
+          <div>
+            <h4 className="text-base font-medium text-white">Full Stack School Management App</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <ul className="flex">
+              <li className="w-1/4 pb-0.5 text-accent font-mono">Test</li>
+              <li className="w-1/4 pb-0.5 text-accent font-mono">Test</li>
+              <li className="w-1/4 pb-0.5 text-accent font-mono">Test</li>
+              <li className="w-1/4 pb-0.5 text-accent font-mono">Test</li>
+            </ul>
+          </div>
         </div>
       </Container.Column>
     </Container>

@@ -2,7 +2,6 @@
   counter-increment: section-title;
   content: '0' counter(section-title) '.';
   font-family: 'Roboto Mono', arial, sans-serif;
-  font-size: 2.25rem;
   margin-right: 5px;
-  @apply text-accent;
+  @apply text-accent text-2xl lg:text-4xl;
 }

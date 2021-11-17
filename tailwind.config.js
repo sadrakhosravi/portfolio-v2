@@ -18,11 +18,11 @@ module.exports = {
       'light-blue': '#ABB9DB',
     },
     fontSize: {
-      xs: '.75rem',
+      xs: '.875rem',
       sm: '1rem',
       base: '1.125rem',
       lg: '1.25rem',
-      xl: '1.5rem',
+      xl: ['1.5rem', '1.8rem'],
       '2xl': ['1.75rem', '2.1rem'],
       '3xl': '1.875rem',
       '4xl': '2.25rem',

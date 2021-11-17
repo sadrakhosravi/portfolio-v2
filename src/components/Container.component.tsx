@@ -9,9 +9,9 @@ type ContainerProps = {
 
 const Container = ({ className, children, gap = true, center = false }: ContainerProps): JSX.Element => (
   <div
-    className={`flex flex-col lg:flex-row px-4 lg:px-6 justify-center relative ${gap ? 'gap-20' : ''} ${
-      className || ''
-    } ${center ? 'items-center' : ''}`}
+    className={`flex flex-col lg:flex-row px-4 lg:px-6 justify-center relative ${
+      gap ? 'gap-10 lg:gap-20' : ''
+    } ${className || ''} ${center ? 'items-center' : ''}`}
   >
     {children}
   </div>
@@ -29,9 +29,9 @@ Container.Column = ({
   center = false,
 }: ContainerProps & ColumnProps) => (
   <div
-    className={`w-full lg:w-${width} py-5 relative flex flex-col ${gap ? 'gap-6' : ''} ${className || ''} ${
-      center ? 'justify-center' : ''
-    }`}
+    className={`w-full lg:w-${width} lg:py-5 relative flex flex-col ${gap ? 'gap-6' : ''} ${
+      className || ''
+    } ${center ? 'justify-center' : ''}`}
   >
     {children}
   </div>

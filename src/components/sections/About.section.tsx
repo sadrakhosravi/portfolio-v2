@@ -46,7 +46,7 @@ const AboutSection = () => {
             <p>My current tech-stack:</p>
             <ol className="flex flex-wrap">
               {recentTechnologies.map((technology: string) => (
-                <li className="w-1/4 mb-1 text-sm text-accent font-mono" key={technology}>
+                <li className="w-1/2 lg:w-1/4 mb-1 text-xs lg:text-sm text-accent font-mono" key={technology}>
                   - {technology}
                 </li>
               ))}

@@ -10,7 +10,11 @@ import Container from 'components/Container.component';
 const ProjectsSection = (): JSX.Element => {
   return (
     <section>
-      <SectionTitle preText="Recent Works" text="Featured Projects" />
+      <Container>
+        <Container.Column>
+          <SectionTitle preText="Recent Works" text="Featured Projects" />
+        </Container.Column>
+      </Container>
       <FeaturedProjects side="left" />
       <FeaturedProjects side="right" />
       <div className="mt-20 mb-10">
