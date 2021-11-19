@@ -59,7 +59,7 @@ body {
 }
 
 section {
-  @apply max-w-full sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto gap-1;
+  @apply max-w-full px-5 lg:px-0 mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl;
 }
 
 section:not(:first-child) {
@@ -68,6 +68,11 @@ section:not(:first-child) {
 
 pre {
   @apply -mb-1;
+}
+
+.header-shadow {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07), 0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.07),
+    0 8px 8px rgba(0, 0, 0, 0.07), 0 16px 16px rgba(0, 0, 0, 0.07), 0 32px 32px rgba(0, 0, 0, 0.07);
 }
 
 .link-underline {

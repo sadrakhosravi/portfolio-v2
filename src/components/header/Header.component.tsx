@@ -23,7 +23,7 @@ const Header = (): JSX.Element => {
   return (
     <header
       className={`fixed top-0 left-0 h-60px z-50 w-full flex justify-between items-center px-4 lg:px-10 transition-all duration-300 border-b-[1.5px] border-light-blue border-opacity-10 ${
-        !isScrolled ? '' : 'bg-navy  drop-shadow-2xl'
+        !isScrolled ? '' : 'bg-navy header-shadow'
       } `}
     >
       <div className="w-1/2 lg:w-2/6 z-20">

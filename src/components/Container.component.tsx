@@ -9,9 +9,9 @@ type ContainerProps = {
 
 const Container = ({ className, children, gap = true, center = false }: ContainerProps): JSX.Element => (
   <div
-    className={`flex flex-col lg:flex-row px-4 lg:px-6 justify-center relative ${
-      gap ? 'gap-10 lg:gap-20' : ''
-    } ${className || ''} ${center ? 'items-center' : ''}`}
+    className={`flex flex-col lg:flex-row lg:px-6 justify-center relative ${gap ? 'gap-10 lg:gap-20' : ''} ${
+      className || ''
+    } ${center ? 'items-center' : ''}`}
   >
     {children}
   </div>

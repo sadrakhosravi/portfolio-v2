@@ -13,7 +13,7 @@ const HeroSection = () => {
       <Container className="h-full" center>
         <Container.Column width="full" gap={false}>
           <h1 className="font-bold text-white">Hello!</h1>
-          <h3 className="mt-0 lg:-mt-3 font-medium text-white">
+          <h3 className="mt-0  font-medium text-white">
             My name is <span className="text-accent">Sadra Khosravi</span> and I am a{' '}
             <span className="text-accent">Full-stack Developer</span>.
           </h3>
@@ -30,7 +30,7 @@ const HeroSection = () => {
               </span>
             </Button>
             <Button href="#" isSecondary>
-              <span className="inline-block lg:mr-1">View Work Experience</span>
+              <span className="inline-block lg:mr-3">View Work Experience</span>
               <span className="inline-block align-middle">
                 <RightArrow className="w-5 h-6 hidden lg:block" />
               </span>

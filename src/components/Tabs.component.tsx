@@ -20,10 +20,13 @@ type ExperienceData = {
 
 const Tabs = ({ data }: { data: ExperienceData[] }): JSX.Element => {
   const [activeTab, setActiveTab] = useState<string>('tab-0');
+  const numOfTabs = data.length;
 
   return (
-    <div className="text-center">
-      <div className={`text-left inline-block mt-6 px-2 relative ${styles.TabsContainer}`}>
+    <div
+      className={`text-left mt-6 relative min-w-[50%] lg:max-w-[66.7%] lg:flex lg:flex-col lg:items-center lg:mx-auto`}
+    >
+      <div className="overflow-x-auto flex relative w-full">
         {data.map((experience, index) => (
           <Tabs.Button
             text={experience.frontmatter.company}
@@ -34,15 +37,15 @@ const Tabs = ({ data }: { data: ExperienceData[] }): JSX.Element => {
             }}
           />
         ))}
-        <Tabs.Indicator activeTab={activeTab} />
-        {data.map((experience, index) => (
-          <Tabs.Content
-            data={experience}
-            id={`tab-${index}-content`}
-            isHidden={`tab-${index}-content` !== activeTab + '-content'}
-          />
-        ))}
+        <Tabs.Indicator numOfTabs={numOfTabs} activeTab={activeTab} />
       </div>
+      {data.map((experience, index) => (
+        <Tabs.Content
+          data={experience}
+          id={`tab-${index}-content`}
+          isHidden={`tab-${index}-content` !== activeTab + '-content'}
+        />
+      ))}
     </div>
   );
 };
@@ -58,9 +61,9 @@ Tabs.Button = ({ text, id, isActive = false, onClick }: TabsButtonProps) => {
   return (
     <button
       id={id}
-      className={`px-4 pb-3 pt-3 rounded-t-sm ${
+      className={`px-4 pb-3 pt-3 rounded-t-sm min-w-[10rem] ${
         isActive && 'text-white bg-accent bg-opacity-5'
-      } hover:text-white ${styles.TabButton}`}
+      } hover:text-white `}
       onClick={onClick}
     >
       {text}
@@ -68,7 +71,7 @@ Tabs.Button = ({ text, id, isActive = false, onClick }: TabsButtonProps) => {
   );
 };
 
-Tabs.Indicator = ({ activeTab = 'tab-0' }: { activeTab: string }) => {
+Tabs.Indicator = ({ activeTab = 'tab-0', numOfTabs }: { activeTab: string; numOfTabs: number }) => {
   const [styles, setStyles] = useState({ offsetWidth: 0, offsetLeft: 0 });
 
   const setElementStyles = () => {
@@ -83,9 +86,12 @@ Tabs.Indicator = ({ activeTab = 'tab-0' }: { activeTab: string }) => {
   }, [activeTab]);
 
   return (
-    <div className="w-full h-1 bg-white bg-opacity-30 relative">
+    <div
+      className={`absolute bottom-0 left-0 h-1 bg-white bg-opacity-30 lg:w-full`}
+      style={{ minWidth: `calc(${numOfTabs} * 10rem)` }}
+    >
       <span
-        className="absolute top-0 left-0 h-1 bg-accent transition-all duration-300"
+        className="absolute top-0 left-0 h-1 bg-accent transition-all duration-300 ml-[8px]"
         style={{ width: styles.offsetWidth, left: styles.offsetLeft }}
       />
     </div>
@@ -100,7 +106,12 @@ type TabsContentProps = {
 
 Tabs.Content = ({ data, id, isHidden = true }: TabsContentProps) => {
   return (
-    <div id={id} className="w-full text-left p-6 min-h-1/2 " role="tab-content" hidden={isHidden}>
+    <div
+      id={id}
+      className="w-full text-left px-4 py-6 lg:p-6 min-h-1/2 "
+      role="tab-content"
+      hidden={isHidden}
+    >
       <h4 className="text-white">
         {data.frontmatter.title} -
         <a

@@ -36,9 +36,9 @@ const FeaturedProjects = ({ side = 'left' }: FeaturedProjectsProps): JSX.Element
           alt="Sadra Khosravi Image"
         />
         <div
-          className={`flex items-center w-full h-full lg:h-auto lg:w-1/2 absolute bottom-0  px-5 lg:px-10 py-4 lg:py-7 rounded-md lg:-mb-6 transition-all duration-200 bg-navy lg:bg-slate-blue bg-opacity-80 lg:bg-opacity-90 lg:backdrop-saturate-200 lg:backdrop-blur-lg  ${elementsStyle.description}`}
+          className={`flex items-end w-full h-full lg:h-auto lg:w-1/2 absolute bottom-0 px-5 lg:px-10 py-4 lg:py-7 rounded-md lg:-mb-6 transition-all duration-200 bg-navy lg:bg-slate-blue bg-opacity-80 lg:bg-opacity-90 lg:backdrop-saturate-200 lg:backdrop-blur-lg  ${elementsStyle.description}`}
         >
-          <div>
+          <div className="w-full">
             <h4 className="text-base font-medium text-white">Full Stack School Management App</h4>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
             <ul className="flex">

@@ -10,18 +10,20 @@ import Container from 'components/Container.component';
 const ProjectsSection = (): JSX.Element => {
   return (
     <section>
-      <Container>
-        <Container.Column>
-          <SectionTitle preText="Recent Works" text="Featured Projects" />
-        </Container.Column>
-      </Container>
+      <SectionTitle preText="Recent Works" text="Featured Projects" />
       <FeaturedProjects side="left" />
       <FeaturedProjects side="right" />
       <div className="mt-20 mb-10">
         <SubSectionTitle text="Other Projects That I’ve Worked" />
       </div>
-      <Container>
-        <Container.Column className="border-separate" width="1/3">
+      <Container gap={false} className="gap-10">
+        <Container.Column className="w-full lg:w-1/3">
+          <OtherProject />
+        </Container.Column>
+        <Container.Column className="w-full lg:w-1/3">
+          <OtherProject />
+        </Container.Column>
+        <Container.Column className="w-full lg:w-1/3">
           <OtherProject />
         </Container.Column>
       </Container>

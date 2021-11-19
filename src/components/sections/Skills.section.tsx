@@ -8,7 +8,11 @@ const SkillsSection = () => {
   return (
     <section>
       <SectionTitle preText="My Tools" text="Skills" />
-      <Skills />
+      <div className="px-6">
+        <Skills />
+        <Skills />
+        <Skills />
+      </div>
     </section>
   );
 };
