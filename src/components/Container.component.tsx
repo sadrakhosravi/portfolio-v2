@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { FramerContentFadeUp } from 'config';
 
 type ContainerProps = {
   className?: string;
@@ -28,13 +30,15 @@ Container.Column = ({
   gap = true,
   center = false,
 }: ContainerProps & ColumnProps) => (
-  <div
+  <motion.div
+    {...FramerContentFadeUp}
+    transition={{ duration: 0.5, delay: 0 }}
     className={`w-full lg:w-${width} lg:py-5 relative flex flex-col ${gap ? 'gap-6' : ''} ${
       className || ''
     } ${center ? 'justify-center' : ''}`}
   >
     {children}
-  </div>
+  </motion.div>
 );
 
 export default Container;

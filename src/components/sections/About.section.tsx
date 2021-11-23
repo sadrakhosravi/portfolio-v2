@@ -8,7 +8,6 @@ import SectionTitle from '../SectionTitle.Component';
 import StyledImage from '../StyledImage.component';
 
 // Images
-
 const AboutSection = () => {
   const recentTechnologies: string[] = [
     'Typescript',
@@ -23,9 +22,9 @@ const AboutSection = () => {
 
   return (
     <section>
+      <SectionTitle preText="Background" text="About" noMargin />
       <Container>
         <Container.Column center>
-          <SectionTitle preText="Background" text="About" noMargin />
           <div>
             <p>
               Hello! My name is Sadra Khosravi and I am a full-stack developer based in Vancouver, B.C. I

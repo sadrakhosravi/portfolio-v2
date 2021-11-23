@@ -37,3 +37,44 @@ export const SkillsList = {
     'MongoDB',
   ],
 };
+
+/* Animations */
+
+// General Config
+export const FramerViewPort = {
+  amount: 'all' as 'all',
+  once: true,
+  margin: '200px 0px 0px 0px',
+};
+
+export const FadeUp = {
+  visible: { y: 0, opacity: 1 },
+  hidden: { y: 50, opacity: 0 },
+};
+
+export const FadeDown = {
+  visible: { y: 0, opacity: 1 },
+  hidden: { y: -50, opacity: 0 },
+};
+
+// FadeUp
+export const FramerFadeUp = {
+  initial: 'hidden',
+  whileInView: 'visible',
+  viewport: { ...FramerViewPort },
+  variants: { ...FadeUp },
+};
+
+export const FramerFadeDown = {
+  initial: 'hidden',
+  whileInView: 'visible',
+  viewport: { ...FramerViewPort },
+  variants: { ...FadeDown },
+};
+
+export const FramerContentFadeUp = {
+  initial: 'hidden',
+  whileInView: 'visible',
+  viewport: { amount: 0.3, once: true },
+  variants: { ...FadeUp },
+};

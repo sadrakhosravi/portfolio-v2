@@ -13,7 +13,7 @@ const OtherProject = () => {
         alt="Sadra Khosravi Image"
       />
       <span className={`w-full h-full absolute top-0 left-0 ${styles.OtherProjects}`} />
-      <div className=" relative m-6 duration-300 group-hover:pb-5">
+      <div className=" absolute bottom-0 left-0 m-6 duration-300 group-hover:pb-5">
         <h4 className="group-hover:text-accent duration-300">School Management System</h4>
         <ul className="flex gap-4 flex-wrap text-accent text-opacity-80 group-hover:text-opacity-100 duration-300">
           <li className="text-sm font-mono group-hover:text-white">Technology</li>

@@ -1,7 +1,8 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 // Navigation items
-import { NavItems } from 'config';
+import { FramerFadeDown, NavItems } from 'config';
 
 // Custom CSS
 import * as styles from '../styles/NavItemStyles.module.css';
@@ -15,15 +16,22 @@ const MainNavigation = ({ isMenuOpen, setIsMenuOpen }: MainNavigationProps): JSX
   return (
     <nav className={`text-center h-full flex items-center`}>
       <ul className={`${styles.Nav} hidden lg:block`}>
-        {NavItems.map(NavItem => (
-          <li
+        {NavItems.map((NavItem, i) => (
+          <motion.li
+            {...FramerFadeDown}
+            transition={{
+              delay: 0.2 + i / 10,
+              type: 'spring',
+              stiffness: 120,
+              damping: 20,
+            }}
             key={NavItem.text}
             className={`inline-block lg:mx-3 sm:mx-2 hover:text-accent active:text-accent ${styles.NavItem}`}
           >
             <a className={`relative text-sm ${styles.NavLink}`} href={NavItem.link}>
               {NavItem.text}
             </a>
-          </li>
+          </motion.li>
         ))}
       </ul>
       <div

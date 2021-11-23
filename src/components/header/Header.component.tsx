@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 // Components
 import Logo from 'components/Logo.component';
@@ -32,9 +33,19 @@ const Header = (): JSX.Element => {
 
       <div className="w-1/2 lg:w-4/6 justify-end text-right flex items-center gap-3 h-full">
         <MainNavigation isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-        <span className="hidden xl:block">
+        <motion.span
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.8,
+            type: 'spring',
+            stiffness: 120,
+            damping: 20,
+          }}
+          className="hidden xl:block"
+        >
           <Button href="#" text="Resume" />
-        </span>
+        </motion.span>
       </div>
     </header>
   );
